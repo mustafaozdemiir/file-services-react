@@ -51,7 +51,7 @@ class App extends Component {
   }
 
   render() {
-    const { currentUser} = this.state;
+    const { currentUser } = this.state;
 
     return (
       <div>
@@ -87,8 +87,9 @@ class App extends Component {
                   {currentUser.username}
                 </Link>
               </li>
+              <br />
               <li className="nav-item">
-                <a href="/login" className="nav-link" onClick={this.logOut}>
+                <a href="/login" className='btn btn-danger' onClick={this.logOut}>
                   Logout
                 </a>
               </li>

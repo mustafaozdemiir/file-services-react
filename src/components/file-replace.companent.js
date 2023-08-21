@@ -115,14 +115,18 @@ class ReplaceFile extends Component {
         const { error, result } = this.state;
 
         return (
-            <div className="container">
+            <div className="card container" style={{ textAlign: "center" }} >
+                <h2>File Replacement Page</h2>
                 <header className="jumbotron">
-                    {error !== "401" ? <div><h2>File Replacement Page</h2>
+                    {error !== "401" ? <div>
                         <input
                             type="file"
                             onChange={this.handleFileChange}
                         />
-                        <button onClick={this.replaceFile}>Replace File</button></div> : <p>Unauthorized Access</p>}
+                        <br />
+                        <br />
+                        <br />
+                        <button className='btn btn-success' onClick={this.replaceFile}>Replace File</button></div> : <p>Unauthorized Access</p>}
 
                     <p>
                         {error !== "401" ?

@@ -99,16 +99,20 @@ class UploadFile extends Component {
     render() {
         const { error, result } = this.state;
         return (
-            <div className="container">
-                <header className="jumbotron">
+            <div style={{ textAlign: "center" }}>
+                <h2>File Upload Page</h2>
+
+                <div className="card container" >
                     {error !== "401" ? (
-                        <div>
-                            <h2>File Upload Page</h2>
+                        <div >
                             <input
                                 type="file"
                                 onChange={this.handleFileChange}
                             />
-                            <button onClick={this.uploadFile}>Upload File</button>
+                            <br />
+                            <br />
+                            <br />
+                            <button className='btn btn-success' style={{ bottom: "12px" }} onClick={this.uploadFile}>Upload File</button>
                         </div>
                     ) : (
                         <p>Unauthorized Access</p>
@@ -122,7 +126,7 @@ class UploadFile extends Component {
                             : ''}
                     </p>
                     <p>{result}</p>
-                </header>
+                </div>
             </div>
         );
     }
